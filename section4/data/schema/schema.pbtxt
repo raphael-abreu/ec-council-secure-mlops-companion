@@ -1,0 +1,863 @@
+feature {
+  name: "duration"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "protocol_type"
+  type: BYTES
+  domain: "protocol_type"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "service"
+  type: BYTES
+  domain: "service"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "flag"
+  type: BYTES
+  domain: "flag"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "src_bytes"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_bytes"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "land"
+  type: INT
+  bool_domain {
+  }
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "wrong_fragment"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "urgent"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "hot"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_failed_logins"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "logged_in"
+  type: INT
+  bool_domain {
+  }
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_compromised"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "root_shell"
+  type: INT
+  bool_domain {
+  }
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "su_attempted"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_root"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_file_creations"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_shells"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_access_files"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_outbound_cmds"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "is_host_login"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "is_guest_login"
+  type: INT
+  bool_domain {
+  }
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "count"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "srv_count"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "serror_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "srv_serror_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "rerror_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "srv_rerror_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "same_srv_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "diff_srv_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "srv_diff_host_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_count"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_srv_count"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_same_srv_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_diff_srv_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_same_src_port_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_srv_diff_host_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_serror_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_srv_serror_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_rerror_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "dst_host_srv_rerror_rate"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  drift_comparator {
+    jensen_shannon_divergence {
+      threshold: 1.0
+    }
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "outcome"
+  type: BYTES
+  domain: "outcome"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+string_domain {
+  name: "protocol_type"
+  value: "icmp"
+  value: "tcp"
+  value: "udp"
+}
+string_domain {
+  name: "service"
+  value: "IRC"
+  value: "X11"
+  value: "Z39_50"
+  value: "auth"
+  value: "bgp"
+  value: "courier"
+  value: "csnet_ns"
+  value: "ctf"
+  value: "daytime"
+  value: "discard"
+  value: "domain"
+  value: "domain_u"
+  value: "echo"
+  value: "eco_i"
+  value: "ecr_i"
+  value: "efs"
+  value: "exec"
+  value: "finger"
+  value: "ftp"
+  value: "ftp_data"
+  value: "gopher"
+  value: "hostnames"
+  value: "http"
+  value: "http_443"
+  value: "imap4"
+  value: "iso_tsap"
+  value: "klogin"
+  value: "kshell"
+  value: "ldap"
+  value: "link"
+  value: "login"
+  value: "mtp"
+  value: "name"
+  value: "netbios_dgm"
+  value: "netbios_ns"
+  value: "netbios_ssn"
+  value: "netstat"
+  value: "nnsp"
+  value: "nntp"
+  value: "ntp_u"
+  value: "other"
+  value: "pm_dump"
+  value: "pop_2"
+  value: "pop_3"
+  value: "printer"
+  value: "private"
+  value: "red_i"
+  value: "remote_job"
+  value: "rje"
+  value: "shell"
+  value: "smtp"
+  value: "sql_net"
+  value: "ssh"
+  value: "sunrpc"
+  value: "supdup"
+  value: "systat"
+  value: "telnet"
+  value: "tftp_u"
+  value: "tim_i"
+  value: "time"
+  value: "urh_i"
+  value: "urp_i"
+  value: "uucp"
+  value: "uucp_path"
+  value: "vmnet"
+  value: "whois"
+}
+string_domain {
+  name: "flag"
+  value: "OTH"
+  value: "REJ"
+  value: "RSTO"
+  value: "RSTOS0"
+  value: "RSTR"
+  value: "S0"
+  value: "S1"
+  value: "S2"
+  value: "S3"
+  value: "SF"
+  value: "SH"
+}
+string_domain {
+  name: "outcome"
+  value: "back."
+  value: "buffer_overflow."
+  value: "ftp_write."
+  value: "guess_passwd."
+  value: "imap."
+  value: "ipsweep."
+  value: "land."
+  value: "loadmodule."
+  value: "multihop."
+  value: "neptune."
+  value: "nmap."
+  value: "normal."
+  value: "perl."
+  value: "phf."
+  value: "pod."
+  value: "portsweep."
+  value: "rootkit."
+  value: "satan."
+  value: "smurf."
+  value: "spy."
+  value: "teardrop."
+  value: "warezclient."
+  value: "warezmaster."
+}

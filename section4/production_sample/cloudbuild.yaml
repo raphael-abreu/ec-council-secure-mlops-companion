@@ -1,0 +1,27 @@
+steps:
+  - name: 'python:3.10'
+    entrypoint: pip
+    args:
+      - install
+      - tfx==1.15.0
+      - google-cloud-aiplatform==1.38.1
+      - google-cloud-storage==2.14.0
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - builds
+      - submit
+      - --tag
+      - gcr.io/$PROJECT_ID/secure-tfx:latest
+      - .
+
+  - name: 'python:3.10'
+    entrypoint: python
+    args:
+      - runner.py
+    env:
+      - PROJECT_ID=$PROJECT_ID
+      - IMAGE_URI=gcr.io/$PROJECT_ID/secure-tfx:latest
+    serviceAccount: projects/$PROJECT_ID/serviceAccounts/secure-ml-pipeline-sa@$PROJECT_ID.iam.gserviceaccount.com
+options:
+  logging: CLOUD_LOGGING_ONLY

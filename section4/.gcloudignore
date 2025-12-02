@@ -1,0 +1,10 @@
+venv/
+data/
+infrastructure/
+
+__pycache__/
+*.pyc
+.git/
+.env
+*.json
+*.md
